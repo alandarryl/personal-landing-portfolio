@@ -4,7 +4,7 @@
 
 /* Variables */
 
-:root{
+/* :root{
     --main-color:#e02f6b;
     --blue:#0000ff;
     --blue-dark:#18293c;
@@ -12,6 +12,20 @@
     --green-yellow:#cddc39;
     --pink-light:#efa2b4;
     --cyan-light:#aef1ee;
+    --white:#ffffff;
+    --white-alpha-40:rgba(255, 255, 255, 0.40);
+    --white-alpha-25:rgba(255, 255, 255, 0.25);
+    --backdrop-filter-blur:blur(5px);
+} */
+
+:root{
+    --main-color:#4da3ff;
+    --blue:#0000ff;
+    --blue-dark:#18293c;
+    --orange:#ffa500;
+    --green-yellow:#cddc39;
+    --pink-light:#063062;
+    --cyan-light:#1a0f41;
     --white:#ffffff;
     --white-alpha-40:rgba(255, 255, 255, 0.40);
     --white-alpha-25:rgba(255, 255, 255, 0.25);
@@ -36,11 +50,13 @@
 body{
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, var(--pink-light), var(--cyan-light));
+    /* background-color: #000; */
     background-attachment: fixed;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: var(--blue-dark);
+    color: #fff;
     line-height: 1.5;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -85,11 +101,11 @@ ul{
 }
 
 section{
-    background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
+    /* background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40); */
     min-height: calc(100vh - 70px);
     border-radius: 30px;
-    backdrop-filter: var(--backdrop-filter-blur);
+    /* backdrop-filter: var(--backdrop-filter-blur); */
     display: none;
 }
 

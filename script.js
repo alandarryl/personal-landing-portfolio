@@ -127,3 +127,34 @@ function portfolioItemDetals(portfolioItem){
 
 
 
+// fonction to send mail 
+
+
+function sendMail(event) {
+    event.preventDefault(); // Prevent form from submitting
+
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
+
+    const serviceID = "service_7yisjvd";
+    const templateID = "template_5m7knse";
+
+    emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            // Clear inputs
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("subject").value = "";
+            document.getElementById("message").value = "";
+
+            console.log(res);
+            alert("Your message has been sent successfully.");
+        })
+        .catch(err => console.log(err));
+}
+
+
